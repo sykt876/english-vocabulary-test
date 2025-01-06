@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>単語テスト</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    #word-container {
+      margin-top: 20px;
+      display: none; /* 初期は非表示 */
+    }
+    #choices button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    #example {
+      margin-top: 10px;
+      font-style: italic;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div id="order-selection">
+    <h1>単語テストを開始します</h1>
+    <button onclick="startTest('ordered')">順番通り</button>
+    <button onclick="startTest('random')">ランダム</button>
+  </div>
+
+  <div id="word-container">
+    <h2 id="word">単語がここに表示されます</h2>
+    <div id="choices"></div>
+    <div id="result"></div>
+    <div id="example"></div>
+    <button onclick="nextQuestion()">次へ</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
